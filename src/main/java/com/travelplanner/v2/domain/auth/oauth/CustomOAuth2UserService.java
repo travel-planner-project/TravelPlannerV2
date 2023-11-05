@@ -1,4 +1,4 @@
-package travelplanner.project.demo.domain.auth.oauth2.service;
+package com.travelplanner.v2.domain.auth.oauth;
 
 import com.travelplanner.v2.domain.auth.oauth.CustomOAuth2User;
 import com.travelplanner.v2.domain.auth.oauth.userInfo.OAuth2UserInfo;
@@ -30,7 +30,9 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
     public OAuth2User loadUser(OAuth2UserRequest request) throws OAuth2AuthenticationException {
 
         OAuth2User oAuth2User = super.loadUser(request);
-        log.info("------------------ getAttributes : {}", oAuth2User.getAttributes());
+        log.info("====================================================");
+        log.info("getAttributes : {}", oAuth2User.getAttributes());
+        log.info("====================================================");
 
         String provider = request.getClientRegistration().getRegistrationId();
 

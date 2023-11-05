@@ -39,7 +39,6 @@ public class AuthService {
     // 회원가입
     @Transactional
     public void register(RegisterRequest request) throws ApiException {
-
         // 이메일로 멤버 조회
         userRepository.findByEmailAndProvider(request.getEmail(), "local")
                 .ifPresent(user -> {
@@ -64,7 +63,6 @@ public class AuthService {
     // 로그인
     @Transactional
     public void login(LoginRequest request, HttpServletResponse response) {
-
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         request.getEmail(),
@@ -79,7 +77,7 @@ public class AuthService {
         String accessToken = tokenUtil.generateAccessToken(String.valueOf(user.getId()));
 
         // 어세스 토큰은 헤더에 담아서 응답으로 보냄
-        response.setHeader("Authorization", accessToken);
+        response.setHeader("Authorization", "Bearer " + accessToken);
 
         if (redisUtil.getData(String.valueOf(user.getId())) == null) { // 레디스에 토큰이 저장되어 있지 않은 경우
             String refreshToken = tokenUtil.generateRefreshToken(String.valueOf(user.getId()));

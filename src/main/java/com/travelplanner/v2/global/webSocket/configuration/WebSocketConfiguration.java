@@ -1,7 +1,8 @@
 package com.travelplanner.v2.global.webSocket.configuration;
 
+import com.travelplanner.v2.global.webSocket.handler.StompErrorHandler;
+import com.travelplanner.v2.global.webSocket.handler.StompHandler;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.ChannelRegistration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
@@ -13,11 +14,8 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 @EnableWebSocketMessageBroker
 @RequiredArgsConstructor
 public class WebSocketConfiguration implements WebSocketMessageBrokerConfigurer {
-
-
     private final StompHandler stompHandler;
-    @Autowired
-    private StompErrorHandler stompErrorHandler;
+    private final StompErrorHandler stompErrorHandler;
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {

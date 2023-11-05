@@ -1,5 +1,8 @@
 package com.travelplanner.v2.global.security;
 
+import com.travelplanner.v2.domain.auth.oauth.CustomAuthenticationSuccessHandler;
+import com.travelplanner.v2.domain.auth.oauth.CustomOAuth2UserService;
+import com.travelplanner.v2.global.jwt.JwtAuthenticationFilter;
 import com.travelplanner.v2.global.util.CookieUtil;
 import com.travelplanner.v2.global.util.RedisUtil;
 import com.travelplanner.v2.global.util.TokenUtil;
@@ -31,7 +34,7 @@ public class SecurityConfiguration {
     private final CookieUtil cookieUtil;
     private final RedisUtil redisUtil;
     private final CustomOAuth2UserService customOAuth2UserService;
-    private final OAuth2AuthenticationSuccessHandler oAuth2AuthenticationSuccessHandler;
+    private final CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler;
 
 
     @Bean
@@ -58,14 +61,14 @@ public class SecurityConfiguration {
                 .anyRequest().authenticated();
 
         http    .oauth2Login()
-                .authorizationEndpoint().baseUri("/oauth/authorize")
+                .authorizationEndpoint().baseUri("/api/oauth/authorize")
                 .and()
-                .redirectionEndpoint().baseUri("/oauth/callback")
+                .redirectionEndpoint().baseUri("/api/oauth/callback")
                 .and()
                 .userInfoEndpoint() // oauth2 로그인 성공후에 사용자 정보를 바로 가져온다.
                 .userService(customOAuth2UserService)
                 .and()
-                .successHandler(oAuth2AuthenticationSuccessHandler);
+                .successHandler(customAuthenticationSuccessHandler);
 
         http
                 .sessionManagement()

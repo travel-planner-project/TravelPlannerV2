@@ -1,6 +1,5 @@
 package com.travelplanner.v2.domain.auth.oauth;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.travelplanner.v2.domain.auth.oauth.userInfo.GoogleUserInfo;
 import com.travelplanner.v2.domain.auth.oauth.userInfo.KakaoUserInfo;
 import com.travelplanner.v2.domain.auth.oauth.userInfo.NaverUserInfo;
@@ -9,7 +8,6 @@ import com.travelplanner.v2.domain.user.domain.User;
 import com.travelplanner.v2.global.util.CookieUtil;
 import com.travelplanner.v2.global.util.RedisUtil;
 import com.travelplanner.v2.global.util.TokenUtil;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.Optional;
@@ -67,7 +65,7 @@ public class CustomAuthenticationSuccessHandler extends SimpleUrlAuthenticationS
         // 인증이 성공했을 때, 어세스 토큰과 리프레시 토큰 발급
         String accessToken = tokenUtil.generateAccessToken(userId);
         // 어세스 토큰은 헤더에 담아서 응답으로 보냄
-        response.setHeader("Authorization", accessToken);
+        response.setHeader("Authorization", "Bearer " + accessToken);
 
         // 리프레시 토큰을 Redis 에 저장
         if (redisUtil.getData(userId) == null) {
@@ -78,5 +76,4 @@ public class CustomAuthenticationSuccessHandler extends SimpleUrlAuthenticationS
 
         response.sendRedirect(frontendRedirectUrl);
     }
-
 }
