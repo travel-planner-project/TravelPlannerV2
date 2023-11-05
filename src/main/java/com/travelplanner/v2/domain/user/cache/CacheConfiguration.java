@@ -1,4 +1,4 @@
-package com.travelplanner.v2.domain.auth.userInfo.cache;
+package com.travelplanner.v2.domain.user.cache;
 
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
