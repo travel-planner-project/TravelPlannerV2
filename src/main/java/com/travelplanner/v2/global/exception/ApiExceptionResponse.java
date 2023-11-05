@@ -10,7 +10,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Schema(description = "API 응답 에러 DTO")
 public class ApiExceptionResponse {
-
     @Schema(description = "상태 코드")
     private int status;
 

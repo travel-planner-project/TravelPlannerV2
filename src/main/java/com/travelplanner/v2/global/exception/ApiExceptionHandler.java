@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
 public class ApiExceptionHandler {
-
     @ExceptionHandler({ApiException.class})
     public ResponseEntity<ApiExceptionResponse> handleApiException(ApiException e) {
         ErrorType errorType = e.getErrorType();
