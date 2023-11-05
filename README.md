@@ -32,6 +32,6 @@
 <br>
 
 ### Docs
-- 🔗기능명세
-- Entity Diagram <br>
+#### 🔗 기능명세
+#### Entity Diagram
   <img src="https://github.com/travel-planner-project/TravelPlanner/assets/119668620/66ad1af2-7584-492e-8bed-6b50144e57c0" width="60%"/>
