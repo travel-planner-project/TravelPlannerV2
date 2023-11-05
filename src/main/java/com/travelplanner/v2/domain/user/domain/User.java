@@ -37,4 +37,18 @@ public class User implements Serializable { // 레디스에 유저정보를 캐�
     private Role role;
 
     private String provider;
+
+    private String profileImageUrl;
+
+    public void edit(UserEditor userEditor) {
+        if (userEditor.getUserNickname() != null) {
+            userNickname = userEditor.getUserNickname();
+        }
+        if (userEditor.getPassword() != null) {
+            password = userEditor.getPassword(); // 비밀번호 수정 로직 추가
+        }
+        if (userEditor.getProfileImageUrl() != null) {
+            profileImageUrl = userEditor.getProfileImageUrl(); // 비밀번호 수정 로직 추가
+        }
+    }
 }
