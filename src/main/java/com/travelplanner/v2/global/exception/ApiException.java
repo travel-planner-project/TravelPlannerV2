@@ -1,7 +1,6 @@
 package com.travelplanner.v2.global.exception;
 
 public class ApiException extends RuntimeException {
-
     private final ErrorType errorType;
 
     public ApiException(ErrorType errorType) {
