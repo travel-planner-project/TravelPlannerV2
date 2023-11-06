@@ -10,7 +10,6 @@ import java.time.Duration;
 @RequiredArgsConstructor
 @Component
 public class RedisUtil {
-
     private final StringRedisTemplate stringRedisTemplate;
 
     // 레디스에서 특정 키를 가진 값 얻기
