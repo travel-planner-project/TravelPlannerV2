@@ -22,7 +22,7 @@ public class ChatController {
     public void sendChat(@DestinationVariable Long plannerId, ChatRequest request, @Header("Authorization") String accessToken) {
         tokenUtil.getAuthenticationFromToken(accessToken);
         messagingTemplate.convertAndSend("/sub/planner-message/" + plannerId,
-                Map.of("type","chat", "msg", chatService.sendChat(request, plannerId)
+                Map.of("type","chat", "msg", chatService.sendChat(request)
                 )
         );
     }

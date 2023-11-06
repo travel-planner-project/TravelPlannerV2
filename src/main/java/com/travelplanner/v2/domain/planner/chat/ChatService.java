@@ -22,7 +22,7 @@ public class ChatService {
     private final ValidatingService validatingService;
 
     @Transactional
-    public ChatResponse sendChat(ChatRequest request, Long plannerId) {
+    public ChatResponse sendChat(ChatRequest request) {
         // 유저 정보
         User user = userRepository.findById(request.getUserId())
                 .orElseThrow(() -> {
@@ -30,9 +30,6 @@ public class ChatService {
                     return new ApiException(ErrorType.USER_NOT_FOUND);
                     }
                 );
-
-        // 플래너와 그룹 멤버 검증 후 플래너 리턴
-        Planner planner = validatingService.validatePlannerAndUserAccess(plannerId);
 
         ChatResponse response = ChatResponse.builder()
                 .userId(user.getId())
