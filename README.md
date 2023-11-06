@@ -33,6 +33,7 @@
 
 ### Docs
 #### 🔗 기능명세
+https://github.com/travel-planner-project/TravelPlannerV2/blob/BE/Docs/SPRINT1%20기능%20명세서.md
 #### Entity Diagram
   <img src="https://github.com/travel-planner-project/TravelPlanner/assets/119668620/66ad1af2-7584-492e-8bed-6b50144e57c0" width="70%"/>
 
@@ -49,5 +50,6 @@
 
 ### Docs
 #### 🔗 기능명세
+https://github.com/travel-planner-project/TravelPlannerV2/blob/BE/Docs/SPRINT2%20기능%20명세서.md
 #### Entity Diagram
 <img src="https://github.com/travel-planner-project/TravelPlanner/assets/119668620/827aa250-849d-4385-918d-7dfaefd556ce" width="70%" />
