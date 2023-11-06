@@ -24,20 +24,16 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         String requestURI = request.getRequestURI();
         String method = request.getMethod();
 
-        if (requestURI.equals("/api/auth/register") ||
-                requestURI.equals("/api/auth/login") ||
-                requestURI.equals("/api/auth/logout") ||
-                requestURI.equals("/api/token/refresh") ||
+        if (requestURI.startsWith("/api/auth") ||
                 requestURI.startsWith("/api/oauth") ||
+                requestURI.equals("/api/token/refresh") ||
                 requestURI.startsWith("/swagger-ui") ||
                 requestURI.startsWith("/v3") ||
                 requestURI.startsWith("/favicon.ico") ||
                 requestURI.startsWith("/ws") ||
                 requestURI.startsWith("/api/feed") ||
-                requestURI.startsWith("/api/login") ||
-                (requestURI.startsWith("/api/planner") && method.equals("GET"))
+                (requestURI.startsWith("/api/planners") && method.equals("GET"))
         ) {
-
             filterChain.doFilter(request, response);
             return;
         }
@@ -47,7 +43,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         String accessToken = null;
 
         if (authorizationHeader != null) {
-            accessToken = authorizationHeader.substring(7);
+            accessToken = authorizationHeader;
         }
 
         // access 토큰 유효성 검사
