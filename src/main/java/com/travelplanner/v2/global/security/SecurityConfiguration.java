@@ -31,8 +31,6 @@ public class SecurityConfiguration {
     private final CustomUserDetailsService customUserDetailsService;
     private final AuthenticationConfiguration authenticationConfiguration;
     private final TokenUtil tokenUtil;
-    private final CookieUtil cookieUtil;
-    private final RedisUtil redisUtil;
     private final CustomOAuth2UserService customOAuth2UserService;
     private final CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler;
 
@@ -50,14 +48,13 @@ public class SecurityConfiguration {
                 .and()
                 .authorizeRequests()
                 .requestMatchers("/ws/**").permitAll()
-                .requestMatchers("/feed/**").permitAll()
-                .requestMatchers(HttpMethod.GET, "/planner/**").permitAll()
+                .requestMatchers("/api/feed/**").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/planners/**").permitAll()
                 .requestMatchers("/oauth/**", "/favicon.ico", "/login/**").permitAll()
                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .requestMatchers("/swagger-ui/**", "/v3/**").permitAll()
-                .requestMatchers("/password/**").permitAll()
-                .requestMatchers("/auth/**").permitAll()
+                .requestMatchers("/api/auth/**").permitAll()
                 .anyRequest().authenticated();
 
         http    .oauth2Login()

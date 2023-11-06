@@ -3,7 +3,6 @@ package com.travelplanner.v2.global.jwt;
 import com.travelplanner.v2.global.exception.ApiException;
 import com.travelplanner.v2.global.exception.ApiExceptionResponse;
 import com.travelplanner.v2.global.exception.ErrorType;
-import com.travelplanner.v2.global.util.AuthUtil;
 import com.travelplanner.v2.global.util.CookieUtil;
 import com.travelplanner.v2.global.util.RedisUtil;
 import com.travelplanner.v2.global.util.TokenUtil;
@@ -19,7 +18,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,7 +31,6 @@ import jakarta.servlet.http.Cookie;
 @RequestMapping(value = "/api")
 @RequiredArgsConstructor
 public class JwtController {
-
     private final TokenUtil tokenUtil;
     private final CookieUtil cookieUtil;
     private final RedisUtil redisUtil;

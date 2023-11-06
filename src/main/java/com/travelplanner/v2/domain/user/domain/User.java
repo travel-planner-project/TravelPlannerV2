@@ -1,14 +1,19 @@
 package com.travelplanner.v2.domain.user.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.travelplanner.v2.domain.planner.plan.planner.domain.Planner;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.Email;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -39,6 +44,17 @@ public class User implements Serializable { // 레디스에 유저정보를 캐�
     private String provider;
 
     private String profileImageUrl;
+
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE)
+    @Builder.Default
+    private List<Planner> planners = new ArrayList<>();
+
+
+    // 연관관계 편의 메서드
+    public void mappingPlanner(Planner planner) {
+        planners.add(planner);
+    }
 
     public void edit(UserEditor userEditor) {
         if (userEditor.getUserNickname() != null) {

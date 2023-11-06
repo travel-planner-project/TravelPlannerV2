@@ -1,4 +1,4 @@
-package com.travelplanner.v2.domain.user;
+package com.travelplanner.v2.domain.user.controller;
 
 import com.travelplanner.v2.domain.user.cache.UserInfoService;
 import com.travelplanner.v2.domain.user.domain.User;

@@ -17,14 +17,13 @@ import org.springframework.stereotype.Component;
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE + 99)
 public class StompHandler implements ChannelInterceptor {
-
     private final TokenUtil tokenUtil;
     // websocket을 통해 들어온 요청이 처리되기 전 실행됨
+
     @Override
     public Message<?> preSend(Message<?> message, MessageChannel channel) {
-
         StompHeaderAccessor accessor = StompHeaderAccessor.wrap(message);
-        String accessToken = accessor.getFirstNativeHeader("Authorization").substring(7);
+        String accessToken = accessor.getFirstNativeHeader("Authorization");
         log.info("====================================================");
         log.info("Received STOMP Message: " + message);
         log.info("All headers: " + accessor.toNativeHeaderMap());
