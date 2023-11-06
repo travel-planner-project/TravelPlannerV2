@@ -2,6 +2,7 @@ package com.travelplanner.v2.domain.user.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.travelplanner.v2.domain.planner.plan.planner.domain.Planner;
+import com.travelplanner.v2.domain.post.post.Post;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -49,6 +50,10 @@ public class User implements Serializable { // 레디스에 유저정보를 캐�
     @OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE)
     @Builder.Default
     private List<Planner> planners = new ArrayList<>();
+
+    @OneToMany(mappedBy = "user", cascade=CascadeType.REMOVE)
+    @Builder.Default
+    private List<Post> posts = new ArrayList<>();
 
 
     // 연관관계 편의 메서드
