@@ -34,4 +34,18 @@
 ### Docs
 #### 🔗 기능명세
 #### Entity Diagram
-  <img src="https://github.com/travel-planner-project/TravelPlanner/assets/119668620/66ad1af2-7584-492e-8bed-6b50144e57c0" width="60%"/>
+  <img src="https://github.com/travel-planner-project/TravelPlanner/assets/119668620/66ad1af2-7584-492e-8bed-6b50144e57c0" width="70%"/>
+
+
+## Sprint 2
+### 주요 기능
+- 인스타형 게시글 작성 기능
+  - 댓글 기능
+- 유저 비밀번호 변경 요청 메일 기능
+
+<br>
+
+### Docs
+#### 🔗 기능명세
+#### Entity Diagram
+<img src="https://github.com/travel-planner-project/TravelPlanner/assets/119668620/827aa250-849d-4385-918d-7dfaefd556ce" width="70%" />
