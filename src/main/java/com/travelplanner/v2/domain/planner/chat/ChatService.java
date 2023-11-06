@@ -17,14 +17,12 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
 public class ChatService {
-
-
     private final UserRepository userRepository;
     private final WebSocketErrorController webSocketErrorController;
     private final ValidatingService validatingService;
+
     @Transactional
     public ChatResponse sendChat(ChatRequest request, Long plannerId) {
-
         // 유저 정보
         User user = userRepository.findById(request.getUserId())
                 .orElseThrow(() -> {
