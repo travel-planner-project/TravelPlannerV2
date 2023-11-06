@@ -13,7 +13,6 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
-
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
@@ -66,6 +65,7 @@ public class TokenUtil extends StompSessionHandlerAdapter{
 
     // 토큰의 유효성 검사
     public boolean isValidToken(String token) {
+        token = token.substring(7);
         try {
             Jws<Claims> claims = Jwts.parser()
                     .setSigningKey(SECRET_KEY)
@@ -122,6 +122,7 @@ public class TokenUtil extends StompSessionHandlerAdapter{
 
     // 토큰 인증과정 밟기
     public void getAuthenticationFromToken(String accessToken) {
+        accessToken = accessToken.substring(7);
         Long userId = Long.valueOf(getUserIdFromToken(accessToken));
         String principal = userRepository.findById(userId).get().getEmail();
         log.info("====================================================");
