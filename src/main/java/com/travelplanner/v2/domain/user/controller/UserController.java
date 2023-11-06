@@ -1,5 +1,6 @@
-package com.travelplanner.v2.domain.user;
+package com.travelplanner.v2.domain.user.controller;
 
+import com.travelplanner.v2.domain.user.UserService;
 import com.travelplanner.v2.domain.user.dto.request.PasswordRequest;
 import com.travelplanner.v2.domain.user.dto.request.ProfileImageUpdateRequest;
 import com.travelplanner.v2.domain.user.dto.response.ProfileResponse;
