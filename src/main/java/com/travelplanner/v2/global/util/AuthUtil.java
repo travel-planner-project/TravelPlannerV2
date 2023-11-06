@@ -1,7 +1,11 @@
 package com.travelplanner.v2.global.util;
 
 import com.travelplanner.v2.domain.auth.oauth.CustomOAuth2User;
+import com.travelplanner.v2.domain.user.UserRepository;
+import com.travelplanner.v2.domain.user.domain.User;
 import com.travelplanner.v2.global.security.CustomUserDetails;
+import java.util.Optional;
+import javax.swing.text.html.Option;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -10,6 +14,8 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 public class AuthUtil {
+    private final UserRepository userRepository;
+
     public Long getLoginUserIndex() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         Long userId = null;
@@ -24,5 +30,9 @@ public class AuthUtil {
         }
 
         return userId;
+    }
+
+    public Optional<User> getLoginUser() {
+        return userRepository.findById(getLoginUserIndex());
     }
 }
