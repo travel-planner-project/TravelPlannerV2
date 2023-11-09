@@ -97,7 +97,8 @@ library.add(faCalendar, faImages, faEnvelope, faList, faEarthAmericas);
   font-size: 20px;
   height: 48px;
   padding: 0 20px;
-  border-radius: 10px;
+  margin-bottom: 5px;
+  border-radius: 8px;
 }
 
 .menu-lists:hover {
@@ -122,7 +123,7 @@ library.add(faCalendar, faImages, faEnvelope, faList, faEarthAmericas);
 
 .switch-container {
   @include container(column, flex-start, flex-start, 100%, auto);
-  padding: 100px 0 0 60px;
+  padding: 90px 0 0 60px;
 }
 
 .switch {
