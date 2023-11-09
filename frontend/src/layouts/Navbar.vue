@@ -81,7 +81,7 @@ library.add(faCalendar, faImages, faEnvelope, faList, faEarthAmericas);
 }
 
 .logo-image {
-  @include image(180px, 25px 0 15px 10px);
+  @include image(130px, 20px 0 10px 10px);
 }
 
 .img-container,
@@ -108,7 +108,7 @@ library.add(faCalendar, faImages, faEnvelope, faList, faEarthAmericas);
 }
 
 .profile-image {
-  @include image(125px, 60px 0 40px 0);
+  @include image(125px, 70px 0 40px 0);
 }
 
 .line {
