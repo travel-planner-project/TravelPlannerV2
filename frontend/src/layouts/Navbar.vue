@@ -23,7 +23,7 @@ library.add(faCalendar, faImages, faEnvelope, faList, faEarthAmericas);
     <div class="img-container">
       <router-link to="/profile">
         <div class="img-contents">
-          <img src="../assets/images/basic_profile.svg" class="profile-image" />
+          <img src="../assets/images/user.svg" class="profile-image" />
         </div>
       </router-link>
     </div>
@@ -74,6 +74,9 @@ library.add(faCalendar, faImages, faEnvelope, faList, faEarthAmericas);
 
 .nav-container {
   @include container(column, flex-start, flex-start, 100%, 100%);
+  background-color: $white;
+  border-right: 1px solid $black;
+  backdrop-filter: blur(20px);
 }
 
 .logo-container {
@@ -108,7 +111,7 @@ library.add(faCalendar, faImages, faEnvelope, faList, faEarthAmericas);
 }
 
 .profile-image {
-  @include image(125px, 70px 0 40px 0);
+  @include image(123px, 85px 0 50px 0);
 }
 
 .line {
@@ -123,7 +126,7 @@ library.add(faCalendar, faImages, faEnvelope, faList, faEarthAmericas);
 
 .switch-container {
   @include container(column, flex-start, flex-start, 100%, auto);
-  padding: 90px 0 0 60px;
+  padding: 88px 0 0 60px;
 }
 
 .switch {
