@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0cc37b4c-b34f-46cd-91c7-1459822d1c31" name="Changes" comment="Feat: 메일 기능 (#13)" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="v2" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="BE" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="1-fe-setting-환경-설정" />
+                    <option name="lastUsedInstant" value="1699517196" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="BE" />
+                    <option name="lastUsedInstant" value="1699515674" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="13-be-feat-메일-기능" />
+                    <option name="lastUsedInstant" value="1699257255" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="11-be-feat-게시글-기능" />
+                    <option name="lastUsedInstant" value="1699254013" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="9-be-feat-플래너-기능" />
+                    <option name="lastUsedInstant" value="1699241595" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2XkalVeaeivuXivFTyJnrg2FTMN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "1-fe-setting-환경-설정",
+    "last_opened_file_path": "/Users/sini/Documents/project/TravelPlannerV2/frontend/build.gradle",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "b3b1804cbe5c0834c525882c475225d3",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "redis"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend" />
+      <recent name="$PROJECT_DIR$/BE" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.travelplanner.v2.domain.planner.groupMember" />
+      <recent name="com.travelplanner.v2.domain.auth.userInfo" />
+      <recent name="com.travelplanner.v2.domain.User" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.travelplannerV2">
+    <configuration name="TravelPlannerV2 [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="travelplannerV2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="v2.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.travelplanner.v2.V2Application" />
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.TravelPlannerV2 [clean]" />
+      <item itemvalue="Spring Boot.travelplannerV2" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.TravelPlannerV2 [clean]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0cc37b4c-b34f-46cd-91c7-1459822d1c31" name="Changes" comment="" />
+      <created>1699175683248</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699175683248</updated>
+      <workItem from="1699175686005" duration="28000" />
+      <workItem from="1699175803489" duration="34881000" />
+      <workItem from="1699240197507" duration="17728000" />
+      <workItem from="1699515454215" duration="931000" />
+      <workItem from="1699516403565" duration="51000" />
+      <workItem from="1699516856719" duration="46000" />
+      <workItem from="1699517174681" duration="244000" />
+    </task>
+    <task id="LOCAL-00006" summary="Docs: README.md 수정 (#2)">
+      <option name="closed" value="true" />
+      <created>1699182227499</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699182227499</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Docs: README.md 수정 (#2)">
+      <option name="closed" value="true" />
+      <created>1699182250365</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699182250365</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Docs: Swagger 설정 (#4)">
+      <option name="closed" value="true" />
+      <created>1699183761974</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699183761974</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Docs: 기능 명세서 생성 (#4)">
+      <option name="closed" value="true" />
+      <created>1699184062530</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699184062530</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Docs: 기능 명세서 수정 (#4)">
+      <option name="closed" value="true" />
+      <created>1699184140488</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699184140488</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Rename: 필요없는 공란 제거 (#4)">
+      <option name="closed" value="true" />
+      <created>1699193960137</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1699193960137</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Feat: 쿠키/토큰/인증 유틸 생성 (#4)">
+      <option name="closed" value="true" />
+      <created>1699194424740</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1699194424740</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Feat: 시큐리티 커스텀 / 설정 생성 (#4)">
+      <option name="closed" value="true" />
+      <created>1699194450356</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1699194450356</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Feat: 웹토큰 필터와 컨트롤러 생성 (#4)">
+      <option name="closed" value="true" />
+      <created>1699194468224</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1699194468224</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Feat: 유저 엔티티 생성 (#4)">
+      <option name="closed" value="true" />
+      <created>1699194484352</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1699194484352</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Feat: 유저 기능 생성 (#4)&#10;- 유저 일반 회원가입/로그인/로그아웃 기능&#10;- 소셜 로그인 기능&#10;- 유저 정보 반환 api 생성&#10;  - 유저 정보 요청시 레디스에 없으면 캐싱하기&#10;  - 시큐리티 컨텍스트 홀더를 통해 현재 로그인한 유저 아이디를 반환합니다.">
+      <option name="closed" value="true" />
+      <created>1699194574190</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1699194574190</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fix: Endpoint 수정과 각종 오탈자, 오류 수정 (#4)">
+      <option name="closed" value="true" />
+      <created>1699198699820</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1699198699820</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fix: 비밀번호 캐싱 안하도록 수정 (#4)">
+      <option name="closed" value="true" />
+      <created>1699198863660</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1699198863660</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Docs: 기능 명세서 수정 (#4)">
+      <option name="closed" value="true" />
+      <created>1699210659196</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1699210659196</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Feat: 유저 정보 변경 기능 (#7)">
+      <option name="closed" value="true" />
+      <created>1699210850585</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1699210850585</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Docs: 기능 명세서 수정 (#7)">
+      <option name="closed" value="true" />
+      <created>1699211883669</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1699211883669</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Feat: 유저 정보 변경 기능 (#7)">
+      <option name="closed" value="true" />
+      <created>1699211917373</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1699211917373</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Docs: 플래너 기능 (#7)">
+      <option name="closed" value="true" />
+      <created>1699241688819</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1699241688819</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Docs: 플래너 기능 (#9)">
+      <option name="closed" value="true" />
+      <created>1699241711166</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1699241711166</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Rename: 폴더 이동 (#7)">
+      <option name="closed" value="true" />
+      <created>1699241758683</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1699241758683</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Docs: 기능 명세 수정 (#9)">
+      <option name="closed" value="true" />
+      <created>1699244176268</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1699244176268</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Docs: 기능 명세 수정 (#9)">
+      <option name="closed" value="true" />
+      <created>1699244185388</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1699244185388</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Refac: 토큰 인증 일부 수정 (#9)">
+      <option name="closed" value="true" />
+      <created>1699252268577</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1699252268577</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Rename: 필요없는 부분 / url 수정 (#9)">
+      <option name="closed" value="true" />
+      <created>1699252305106</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1699252305106</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Rename: 필요없는 부분 삭제 (#9)">
+      <option name="closed" value="true" />
+      <created>1699252336825</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1699252336825</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Feat: 페이지 유틸 생성 (#9)">
+      <option name="closed" value="true" />
+      <created>1699252363468</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1699252363468</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Feat: 실시간 채팅 기능 (#9)">
+      <option name="closed" value="true" />
+      <created>1699252383566</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1699252383566</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Feat: 그룹 멤버 추가 / 삭제 기능 (#9)">
+      <option name="closed" value="true" />
+      <created>1699252400680</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1699252400680</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Feat: 날짜 CRUD (#9)">
+      <option name="closed" value="true" />
+      <created>1699252421774</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1699252421774</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Feat: 투두 CRUD (#9)">
+      <option name="closed" value="true" />
+      <created>1699252431877</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1699252431877</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Feat: 플래너 CRUD (#9)">
+      <option name="closed" value="true" />
+      <created>1699252440217</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1699252440217</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Feat: 검증 기능 (#9)">
+      <option name="closed" value="true" />
+      <created>1699252454490</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1699252454490</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Feat: 연관관계 추가 (#9)">
+      <option name="closed" value="true" />
+      <created>1699252474743</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1699252474744</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Rename: 공백 제거 (#9)">
+      <option name="closed" value="true" />
+      <created>1699252929856</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1699252929856</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Rename: 불필요한 파라미터 제거 (#9)">
+      <option name="closed" value="true" />
+      <created>1699253243499</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1699253243499</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Docs: 기능 명세서 생성 (#11)">
+      <option name="closed" value="true" />
+      <created>1699254144712</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1699254144712</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Setting: build.gradle 수정 (#11)">
+      <option name="closed" value="true" />
+      <created>1699254164905</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1699254164905</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Feat: 현재 로그인 유저의 객체를 가져오는 메서드 추가 (#11)">
+      <option name="closed" value="true" />
+      <created>1699256634314</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1699256634314</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Feat: 연관 관계 추가 (#11)">
+      <option name="closed" value="true" />
+      <created>1699256650797</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1699256650797</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Feat: 댓글 기능 (#11)">
+      <option name="closed" value="true" />
+      <created>1699256666867</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1699256666867</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Feat: 게시글 기능 (#11)">
+      <option name="closed" value="true" />
+      <created>1699256676237</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1699256676237</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Rename: 필요없는 import 삭제 (#11)">
+      <option name="closed" value="true" />
+      <created>1699256717650</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1699256717650</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Docs: README.md 수정 (#11)">
+      <option name="closed" value="true" />
+      <created>1699256997972</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1699256997972</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Docs: README.md 수정 (#11)">
+      <option name="closed" value="true" />
+      <created>1699257022440</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1699257022440</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Docs: 기능 명세서 수정 (#11)">
+      <option name="closed" value="true" />
+      <created>1699257295790</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1699257295793</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Docs: 기능 명세서 수정 (#11)">
+      <option name="closed" value="true" />
+      <created>1699257885416</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1699257885416</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Rename: 필요없는 공백 제거 (#11)">
+      <option name="closed" value="true" />
+      <created>1699257909657</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1699257909659</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Rename: 필요없는 공백 제거 (#11)">
+      <option name="closed" value="true" />
+      <created>1699257938168</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1699257938168</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Feat: 메일 기능 (#13)">
+      <option name="closed" value="true" />
+      <created>1699257980987</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1699257980987</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/1-fe-setting-환경-설정" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refac: 토큰 인증 일부 수정 (#9)" />
+    <MESSAGE value="Rename: 필요없는 부분 / url 수정 (#9)" />
+    <MESSAGE value="Rename: 필요없는 부분 삭제 (#9)" />
+    <MESSAGE value="Feat: 페이지 유틸 생성 (#9)" />
+    <MESSAGE value="Feat: 실시간 채팅 기능 (#9)" />
+    <MESSAGE value="Feat: 그룹 멤버 추가 / 삭제 기능 (#9)" />
+    <MESSAGE value="Feat: 날짜 CRUD (#9)" />
+    <MESSAGE value="Feat: 투두 CRUD (#9)" />
+    <MESSAGE value="Feat: 플래너 CRUD (#9)" />
+    <MESSAGE value="Feat: 검증 기능 (#9)" />
+    <MESSAGE value="Feat: 연관관계 추가 (#9)" />
+    <MESSAGE value="Rename: 공백 제거 (#9)" />
+    <MESSAGE value="Rename: 불필요한 파라미터 제거 (#9)" />
+    <MESSAGE value="Docs: 기능 명세서 생성 (#11)" />
+    <MESSAGE value="Setting: build.gradle 수정 (#11)" />
+    <MESSAGE value="Feat: 현재 로그인 유저의 객체를 가져오는 메서드 추가 (#11)" />
+    <MESSAGE value="Feat: 연관 관계 추가 (#11)" />
+    <MESSAGE value="Feat: 댓글 기능 (#11)" />
+    <MESSAGE value="Feat: 게시글 기능 (#11)" />
+    <MESSAGE value="Rename: 필요없는 import 삭제 (#11)" />
+    <MESSAGE value="Docs: README.md 수정 (#11)" />
+    <MESSAGE value="Docs: 기능 명세서 수정 (#13)" />
+    <MESSAGE value="Rename: 필요없는 공백 제거 (#13)" />
+    <MESSAGE value="Feat: 메일 기능 (#13)" />
+    <MESSAGE value="Docs: 기능 명세서 수정 (#13)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feat: 메일 기능 (#13)" />
+  </component>
+</project>
