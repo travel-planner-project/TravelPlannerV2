@@ -1,19 +1,18 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import axios from 'axios';
 
-const requestInterceptor = axios.create({
-  baseURL: 'https://dev.travel-planner.xyz/api',
+const axiosInstance = axios.create({
+  baseURL: 'http://localhost:8080/api',
 });
 
-requestInterceptor.interceptors.request.use(
-  (config: AxiosRequestConfig) => {
-    const accessToken = localStorage.getItem('Authorization');
-    if (accessToken && config.headers) {
-      config.headers['Authorization'] = `Bearer ${accessToken}`;
+axiosInstance.interceptors.request.use(
+  config => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
     }
-
     return config;
   },
-  (error: any) => {
+  error => {
     return Promise.reject(error);
   },
 );
