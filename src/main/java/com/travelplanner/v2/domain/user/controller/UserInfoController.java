@@ -27,7 +27,8 @@ public class UserInfoController {
 
     @Operation(summary = "유저 정보 반환")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "유저 정보 반환 성공"),
+            @ApiResponse(responseCode = "200", description = "유저 정보 반환 성공",
+                    content = @Content(schema = @Schema(implementation = UserDTO.class)))
     })
     @GetMapping(value = "/me")
     public ResponseEntity<UserDTO> getUserInfo() {
@@ -38,7 +39,7 @@ public class UserInfoController {
     @Operation(summary = "유저 정보 갱신")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "유저 정보 갱신 성공",
-                    content = @Content(schema = @Schema(implementation = UserDTO.class))),
+                    content = @Content(schema = @Schema(implementation = UserDTO.class)))
 
     })
     @GetMapping(value = "/me/reload")
