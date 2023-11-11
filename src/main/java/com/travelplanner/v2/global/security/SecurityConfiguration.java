@@ -50,11 +50,10 @@ public class SecurityConfiguration {
                 .requestMatchers("/ws/**").permitAll()
                 .requestMatchers("/api/feed/**").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/planners/**").permitAll()
-                .requestMatchers("/oauth/**", "/favicon.ico", "/login/**").permitAll()
                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                .requestMatchers("/swagger-ui/**", "/v3/**").permitAll()
-                .requestMatchers("/api/auth/**").permitAll()
+                .requestMatchers("/swagger-ui/**", "/v3/**", "/favicon.ico").permitAll()
+                .requestMatchers("/api/auth/**", "/api/oauth/**").permitAll()
                 .anyRequest().authenticated();
 
         http    .oauth2Login()
@@ -66,6 +65,9 @@ public class SecurityConfiguration {
                 .userService(customOAuth2UserService)
                 .and()
                 .successHandler(customAuthenticationSuccessHandler);
+
+        http
+                .formLogin().disable();
 
         http
                 .sessionManagement()
