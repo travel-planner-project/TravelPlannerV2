@@ -59,7 +59,7 @@ public class UserController {
             @ApiResponse(responseCode = "404", description = "특정 유저를 찾을 수 없는 경우",
                     content = @Content(schema = @Schema(implementation = ApiExceptionResponse.class))),
     })
-    @PatchMapping(value = "/me")
+    @PatchMapping(value = "")
     public void updateUserProfileImage(@Parameter(name = "profileUpdateRequest", description = "프로필 수정 요청", in = ParameterIn.QUERY) // swagger
                                            @RequestPart ProfileImageUpdateRequest request,
                                            @Parameter(name = "profileImg", description = "프로필 이미지", in = ParameterIn.QUERY) // swagger
@@ -102,7 +102,7 @@ public class UserController {
             @ApiResponse(responseCode = "404", description = "유저가 존재하지 않습니다.",
                     content = @Content(schema = @Schema(implementation = ApiExceptionResponse.class))),
     })
-    @DeleteMapping(value = "/delete")
+    @DeleteMapping(value = "")
     public void deleteUser(@RequestBody PasswordRequest request) throws ApiException {
         if (userService.checkPassword(request)) {
             userService.deleteUser();
