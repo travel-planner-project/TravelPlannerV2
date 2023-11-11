@@ -27,7 +27,7 @@ import org.springframework.web.filter.CorsFilter;
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfiguration {
-
+    private final CustomAuthenticationEntryPoint customAuthenticationEntryPoint;
     private final CustomUserDetailsService customUserDetailsService;
     private final AuthenticationConfiguration authenticationConfiguration;
     private final TokenUtil tokenUtil;
@@ -48,15 +48,18 @@ public class SecurityConfiguration {
                 .and()
                 .authorizeRequests()
                 .requestMatchers("/ws/**").permitAll()
+                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+                .requestMatchers("/api/auth/**", "/api/oauth/**",  "/login/**").permitAll()
+                .requestMatchers("/swagger-ui/**", "/v3/**", "/favicon.ico").permitAll()
                 .requestMatchers("/api/feed/**").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/planners/**").permitAll()
                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
-                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                .requestMatchers("/swagger-ui/**", "/v3/**", "/favicon.ico").permitAll()
-                .requestMatchers("/api/auth/**", "/api/oauth/**",  "/login/**").permitAll()
-                .anyRequest().authenticated();
+                .anyRequest().authenticated()
+                .and()
+                .exceptionHandling().authenticationEntryPoint(customAuthenticationEntryPoint);
 
-        http    .oauth2Login()
+                http
+                .oauth2Login()
                 .authorizationEndpoint().baseUri("/api/oauth/authorize")
                 .and()
                 .redirectionEndpoint().baseUri("/api/oauth/callback")
@@ -73,7 +76,8 @@ public class SecurityConfiguration {
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
-        http    .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
+        http
+                .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(customAuthenticationFilter(), JwtAuthenticationFilter.class);
 
         return http.build();
