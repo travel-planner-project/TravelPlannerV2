@@ -53,7 +53,7 @@ public class SecurityConfiguration {
                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .requestMatchers("/swagger-ui/**", "/v3/**", "/favicon.ico").permitAll()
-                .requestMatchers("/api/auth/**", "/api/oauth/**").permitAll()
+                .requestMatchers("/api/auth/**", "/api/oauth/**",  "/login/**").permitAll()
                 .anyRequest().authenticated();
 
         http    .oauth2Login()
