@@ -16,7 +16,7 @@ public class UserInfoService {
     private final UserRepository userRepository;
     private final AuthUtil authUtil;
 
-    @Cacheable(value = "userInfo", key = "#userId")
+    @Cacheable(value = "userInfo", key="#p0")
     public UserDTO getUserById() {
         Long userId = authUtil.getLoginUserIndex();
         return userRepository.findById(userId)
@@ -24,7 +24,7 @@ public class UserInfoService {
                 .orElseThrow(() -> new ApiException(ErrorType.USER_NOT_FOUND));
     }
 
-    @CachePut(value = "userInfo", key = "#userId")
+    @CachePut(value = "userInfo", key="#p0")
     public UserDTO reloadUser() {
         Long userId = authUtil.getLoginUserIndex();
         return userRepository.findById(userId)
