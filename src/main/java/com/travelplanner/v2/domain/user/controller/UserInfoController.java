@@ -1,5 +1,6 @@
 package com.travelplanner.v2.domain.user.controller;
 
+import com.travelplanner.v2.domain.user.cache.UserDTO;
 import com.travelplanner.v2.domain.user.cache.UserInfoService;
 import com.travelplanner.v2.domain.user.domain.User;
 import io.swagger.v3.oas.annotations.Operation;
@@ -26,8 +27,8 @@ public class UserInfoController {
             @ApiResponse(responseCode = "200", description = "유저 정보 반환 성공"),
     })
     @GetMapping(value = "/me")
-    public ResponseEntity<User> getUserInfo() {
-        User user = userInfoService.getUserById();
+    public ResponseEntity<UserDTO> getUserInfo() {
+        UserDTO user = userInfoService.getUserById();
         return ResponseEntity.ok().body(user);
     }
 
@@ -36,8 +37,8 @@ public class UserInfoController {
             @ApiResponse(responseCode = "200", description = "유저 정보 갱신 성공"),
     })
     @GetMapping(value = "/me/reload")
-    public ResponseEntity<User> reloadUserInfo() {
-        User user = userInfoService.reloadUser();
+    public ResponseEntity<UserDTO> reloadUserInfo() {
+        UserDTO user = userInfoService.reloadUser();
         return ResponseEntity.ok().body(user);
     }
 }
