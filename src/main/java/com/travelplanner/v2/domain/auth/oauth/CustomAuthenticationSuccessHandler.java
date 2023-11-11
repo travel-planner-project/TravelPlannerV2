@@ -31,7 +31,7 @@ public class CustomAuthenticationSuccessHandler extends SimpleUrlAuthenticationS
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
                                         Authentication authentication) throws IOException {
-        String frontendRedirectUrl = "http://localhost:5173/feed"; // feed 화면으로
+        String frontendRedirectUrl = "http://localhost:5173/oauth/callback";
         CustomOAuth2User customOAuth2User = (CustomOAuth2User) authentication.getPrincipal();
         String provider = customOAuth2User.getUser().getProvider();
         String email = null;
