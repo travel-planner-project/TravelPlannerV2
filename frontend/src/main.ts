@@ -8,6 +8,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './App.vue';
+import Router from './router';
 
 library.add(faUserSecret);
 
@@ -15,5 +16,6 @@ createApp(App)
   .use(VueQueryPlugin)
   .use(BootstrapVue3)
   .use(PiniaVuePlugin)
+  .use(Router)
   .component('FontAwesomeIcon', FontAwesomeIcon)
   .mount('#app');
