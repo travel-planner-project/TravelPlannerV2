@@ -36,7 +36,6 @@ public class User implements Serializable { // 레디스에 유저정보를 캐�
     @Email
     private String email;
 
-    @JsonIgnore
     private String password;
 
     @Enumerated(EnumType.STRING)
