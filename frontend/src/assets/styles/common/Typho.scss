@@ -1,0 +1,16 @@
+.title {
+  font-family: 'pre-extrabold', sans-serif;
+  font-size: 54px;
+  margin-bottom: 50px;
+}
+
+@mixin input_label($font-size: 20px) {
+  font-size: $font-size;
+  text-align: center;
+}
+
+@mixin input_warning($font-size: 20px) {
+  font-size: $font-size;
+  color: #FF2D55;
+  font-family: 'pre-medium', sans-serif;
+}
