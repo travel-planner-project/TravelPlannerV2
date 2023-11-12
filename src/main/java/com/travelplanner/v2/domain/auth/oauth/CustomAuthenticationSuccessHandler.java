@@ -75,11 +75,11 @@ public class CustomAuthenticationSuccessHandler extends SimpleUrlAuthenticationS
             cookieUtil.create(refreshToken, response);
         }
 
-        String encodedUserId = URLEncoder.encode(userId, StandardCharsets.UTF_8);
-        String encodedEmail = URLEncoder.encode(user.get().getEmail(), StandardCharsets.UTF_8);
-        String encodedNickname = URLEncoder.encode(user.get().getUserNickname(), StandardCharsets.UTF_8);
-        String encodedProvider = URLEncoder.encode(user.get().getProvider(), StandardCharsets.UTF_8);
-        String encodedProfileImgUrl = URLEncoder.encode(user.get().getProfileImageUrl(), StandardCharsets.UTF_8);
+        String encodedUserId = encodeValue(String.valueOf(user.get().getId()));
+        String encodedEmail = encodeValue(user.get().getEmail());
+        String encodedNickname = encodeValue(user.get().getUserNickname());
+        String encodedProvider = encodeValue(user.get().getProvider());
+        String encodedProfileImgUrl = encodeValue(user.get().getProfileImageUrl());
 
         // 프론트엔드 페이지로 토큰과 함께 리다이렉트
         String frontendRedirectUri = "http://localhost:5173";
@@ -88,6 +88,14 @@ public class CustomAuthenticationSuccessHandler extends SimpleUrlAuthenticationS
                 frontendRedirectUri, accessToken, encodedUserId, encodedEmail, encodedNickname,
                 encodedProvider, encodedProfileImgUrl
         );
+
         response.sendRedirect(frontendRedirectUrl);
+    }
+
+    private String encodeValue(String value) {
+        if (value == null) {
+            return "";
+        }
+        return URLEncoder.encode(value, StandardCharsets.UTF_8);
     }
 }
