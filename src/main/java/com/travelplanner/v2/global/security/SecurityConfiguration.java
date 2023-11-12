@@ -49,7 +49,7 @@ public class SecurityConfiguration {
                 .authorizeRequests()
                 .requestMatchers("/ws/**").permitAll()
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                .requestMatchers("/api/auth/**", "/api/oauth/**",  "/login/**").permitAll()
+                .requestMatchers("/api/auth/**", "/oauth/**",  "/login/**").permitAll()
                 .requestMatchers("/swagger-ui/**", "/v3/**", "/favicon.ico").permitAll()
                 .requestMatchers("/api/feed/**").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/planners/**").permitAll()
@@ -60,9 +60,9 @@ public class SecurityConfiguration {
 
                 http
                 .oauth2Login()
-                .authorizationEndpoint().baseUri("/api/oauth/authorize")
+                .authorizationEndpoint().baseUri("/oauth/authorize")
                 .and()
-                .redirectionEndpoint().baseUri("/api/oauth/callback")
+                .redirectionEndpoint().baseUri("/oauth/callback")
                 .and()
                 .userInfoEndpoint() // oauth2 로그인 성공후에 사용자 정보를 바로 가져온다.
                 .userService(customOAuth2UserService)
