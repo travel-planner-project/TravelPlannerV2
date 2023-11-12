@@ -1,6 +1,5 @@
 package com.travelplanner.v2.domain.auth.oauth;
 
-import com.travelplanner.v2.domain.auth.oauth.CustomOAuth2User;
 import com.travelplanner.v2.domain.auth.oauth.userInfo.OAuth2UserInfo;
 import com.travelplanner.v2.domain.auth.oauth.userInfo.OAuthUserInfoFactory;
 import com.travelplanner.v2.domain.user.UserRepository;
@@ -24,6 +23,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class CustomOAuth2UserService extends DefaultOAuth2UserService {
     private final UserRepository userRepository;
+    @Autowired
     private @Lazy PasswordEncoder passwordEncoder;
 
     @Override
