@@ -51,7 +51,7 @@ public class CustomAuthenticationSuccessHandler extends SimpleUrlAuthenticationS
 
         if(response.isCommitted()) {
             log.info("====================================================");
-            log.debug("------------------ Response 전송 완료");
+            log.debug("Response 전송 완료");
             log.info("====================================================");
         }
 

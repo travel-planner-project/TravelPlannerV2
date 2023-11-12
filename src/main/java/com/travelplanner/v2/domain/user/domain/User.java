@@ -26,7 +26,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @Builder
 @AllArgsConstructor
-public class User implements Serializable { // 레디스에 유저정보를 캐싱을 위해 구현 하였습니다.
+public class User { // 레디스에 유저정보를 캐싱을 위해 구현 하였습니다.
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

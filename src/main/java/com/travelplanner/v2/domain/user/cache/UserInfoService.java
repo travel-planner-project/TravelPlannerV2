@@ -16,20 +16,16 @@ public class UserInfoService {
     private final UserRepository userRepository;
     private final AuthUtil authUtil;
 
-    @Cacheable(value = "userInfo", key="#p0")
-    public UserDTO getUserById() {
-        Long userId = authUtil.getLoginUserIndex();
-        return userRepository.findById(userId)
-                .map(this::toDTO)
-                .orElseThrow(() -> new ApiException(ErrorType.USER_NOT_FOUND));
+    @Cacheable(value = "userInfo", key = "@authUtil.getLoginUserIndex().toString()")
+    public UserDTO cacheUserInfo() {
+        User user = authUtil.getLoginUser().get();
+        return toDTO(user);
     }
 
-    @CachePut(value = "userInfo", key="#p0")
-    public UserDTO reloadUser() {
-        Long userId = authUtil.getLoginUserIndex();
-        return userRepository.findById(userId)
-                .map(this::toDTO)
-                .orElseThrow(() -> new ApiException(ErrorType.USER_NOT_FOUND));
+    @CachePut(value = "userInfo", key="@authUtil.getLoginUserIndex().toString()")
+    public UserDTO reloadUserInfo() {
+        User user = authUtil.getLoginUser().get();
+        return toDTO(user);
     }
 
     private UserDTO toDTO(User user) {

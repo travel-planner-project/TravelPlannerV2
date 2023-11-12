@@ -1,10 +1,12 @@
 package com.travelplanner.v2.global.util;
 
 import com.travelplanner.v2.domain.user.UserRepository;
+import com.travelplanner.v2.domain.user.domain.User;
 import com.travelplanner.v2.global.exception.ApiException;
 import com.travelplanner.v2.global.exception.ErrorType;
 import io.jsonwebtoken.*;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -108,7 +110,7 @@ public class TokenUtil extends StompSessionHandlerAdapter{
 
     // 어세스 토큰을 헤더에서 추출하는 메서드
     public String getJWTTokenFromHeader(HttpServletRequest request) {
-        String authorizationHeader = request.getHeader("Authorization");
+        String authorizationHeader = request.getHeader("Authorization").substring(7);
         log.info("====================================================");
         log.info("Authorization Header: " + authorizationHeader); // 로그 추가
         log.info("====================================================");
@@ -124,15 +126,15 @@ public class TokenUtil extends StompSessionHandlerAdapter{
     public void getAuthenticationFromToken(String accessToken) {
         accessToken = accessToken.substring(7);
         Long userId = Long.valueOf(getUserIdFromToken(accessToken));
-        String principal = userRepository.findById(userId).get().getEmail();
+        User user = userRepository.findById(userId).get();
         log.info("====================================================");
         log.info("어세스 토큰: " + accessToken);
-        log.info("유저 이메일: " + principal);
+        log.info("유저 이메일: " + user.getEmail());
         log.info("====================================================");
 
         // JWT 토큰이 유효하면, 사용자 정보를 연결 세션에 추가
         UsernamePasswordAuthenticationToken authenticationToken =
-                new UsernamePasswordAuthenticationToken(principal, accessToken, new ArrayList<>());
+                new UsernamePasswordAuthenticationToken(user, accessToken, new ArrayList<>());
         SecurityContextHolder.getContext().setAuthentication(authenticationToken);
     }
 

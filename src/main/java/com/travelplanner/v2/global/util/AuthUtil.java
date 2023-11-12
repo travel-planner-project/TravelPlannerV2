@@ -1,11 +1,8 @@
 package com.travelplanner.v2.global.util;
 
-import com.travelplanner.v2.domain.auth.oauth.CustomOAuth2User;
 import com.travelplanner.v2.domain.user.UserRepository;
 import com.travelplanner.v2.domain.user.domain.User;
-import com.travelplanner.v2.global.security.CustomUserDetails;
 import java.util.Optional;
-import javax.swing.text.html.Option;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -18,17 +15,8 @@ public class AuthUtil {
 
     public Long getLoginUserIndex() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        Long userId = null;
-
-        if (authentication.getPrincipal() instanceof CustomUserDetails) {
-            CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
-            userId = userDetails.getUser().getId();
-
-        } else if (authentication.getPrincipal() instanceof CustomOAuth2User) {
-            CustomOAuth2User oAuth2User = (CustomOAuth2User) authentication.getPrincipal();
-            userId = oAuth2User.getUser().getId();
-        }
-
+        Object principal = authentication.getPrincipal();
+        Long userId = ((User) principal).getId();
         return userId;
     }
 
