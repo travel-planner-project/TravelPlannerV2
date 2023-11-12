@@ -2,16 +2,20 @@ import { createWebHistory, createRouter } from 'vue-router';
 
 const routes = [
   {
-    path: '/auth/register',
-    component: () => import('../components/user/UserRegister.vue'),
+    path: '/register',
+    component: () => import('../views/user/UserRegister.vue'),
   },
   {
-    path: '/auth/login',
-    component: () => import('../components/user/UserLogin.vue'),
+    path: '/login',
+    component: () => import('../views/user/UserLogin.vue'),
   },
   {
     path: '/oauth/callback',
-    component: () => import('../components/user/OAuthLogin.vue'),
+    component: () => import('../views/user/OAuthLogin.vue'),
+  },
+  {
+    path: '/feed',
+    component: () => import('../views/TheFeed.vue'),
   },
 ];
 
