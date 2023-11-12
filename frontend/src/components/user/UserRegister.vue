@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { registerUser } from '../../api/auth-api.ts';
+import { registerUser } from '../../api/AuthAPI.ts';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -101,7 +101,11 @@ const handleRegister = async () => {
         >
           회원 가입
         </button>
-        <button class="gray-button">로그인</button>
+        <button class="gray-button">
+          <RouterLink to="/auth/login" style="text-decoration: none"
+            >로그인</RouterLink
+          >
+        </button>
       </div>
     </form>
   </div>
