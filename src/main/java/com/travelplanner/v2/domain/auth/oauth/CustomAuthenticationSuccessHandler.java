@@ -10,6 +10,8 @@ import com.travelplanner.v2.global.util.RedisUtil;
 import com.travelplanner.v2.global.util.TokenUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -31,7 +33,6 @@ public class CustomAuthenticationSuccessHandler extends SimpleUrlAuthenticationS
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
                                         Authentication authentication) throws IOException {
-        String frontendRedirectUrl = "http://localhost:5173/oauth/callback";
         CustomOAuth2User customOAuth2User = (CustomOAuth2User) authentication.getPrincipal();
         String provider = customOAuth2User.getUser().getProvider();
         String email = null;
@@ -74,6 +75,19 @@ public class CustomAuthenticationSuccessHandler extends SimpleUrlAuthenticationS
             cookieUtil.create(refreshToken, response);
         }
 
+        String encodedUserId = URLEncoder.encode(userId, StandardCharsets.UTF_8);
+        String encodedEmail = URLEncoder.encode(user.get().getEmail(), StandardCharsets.UTF_8);
+        String encodedNickname = URLEncoder.encode(user.get().getUserNickname(), StandardCharsets.UTF_8);
+        String encodedProvider = URLEncoder.encode(user.get().getProvider(), StandardCharsets.UTF_8);
+        String encodedProfileImgUrl = URLEncoder.encode(user.get().getProfileImageUrl(), StandardCharsets.UTF_8);
+
+        // 프론트엔드 페이지로 토큰과 함께 리다이렉트
+        String frontendRedirectUri = "http://localhost:5173";
+        String frontendRedirectUrl = String.format(
+                "%s/oauth/callback?token=%s&userId=%s&email=%s&nickname=%s&provider=%s&profileImgUrl=%s",
+                frontendRedirectUri, accessToken, encodedUserId, encodedEmail, encodedNickname,
+                encodedProvider, encodedProfileImgUrl
+        );
         response.sendRedirect(frontendRedirectUrl);
     }
 }
