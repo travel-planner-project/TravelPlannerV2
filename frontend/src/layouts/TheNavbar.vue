@@ -88,7 +88,10 @@ library.add(faCalendar, faImages, faEnvelope, faList, faEarthAmericas);
 }
 
 .img-container,
-.menu-container,
+.menu-container {
+  @include container(column, center, center, 100%, auto);
+}
+
 .menu-contents {
   @include container(column, center, center, 100%, auto);
 }
@@ -102,6 +105,7 @@ library.add(faCalendar, faImages, faEnvelope, faList, faEarthAmericas);
   padding: 0 20px;
   margin-bottom: 5px;
   border-radius: 8px;
+  text-decoration: none;
 }
 
 .menu-lists:hover {
