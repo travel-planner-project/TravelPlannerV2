@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './App.vue';
 import Router from './router';
 import { VueQueryPlugin } from 'vue-query';
+import InfiniteLoading from 'v3-infinite-loading';
 
 const pinia = createPinia();
 library.add(faUserSecret);
@@ -18,5 +19,7 @@ createApp(App)
   .use(BootstrapVue3)
   .use(pinia)
   .use(Router)
+  .use(InfiniteLoading)
+  .component('infinite-loading', InfiniteLoading)
   .component('FontAwesomeIcon', FontAwesomeIcon)
   .mount('#app');
