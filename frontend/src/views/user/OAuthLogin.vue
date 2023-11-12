@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useRoute, useRouter } from 'vue-router';
 import { useQuery } from 'vue-query';
-import { useAuthStore } from '../../store/AuthStore';
+import { useAuthStore } from '../../store/AuthStore.ts';
 import { ref, onMounted, computed } from 'vue';
-import { loginUserInfo } from '../../api/UserAPI';
+import { loginUserInfo } from '../../api/UserAPI.ts';
 
 const route = useRoute();
 const router = useRouter();

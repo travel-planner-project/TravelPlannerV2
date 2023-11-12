@@ -69,13 +69,13 @@ const handleLogin = async () => {
 </template>
 
 <style scoped lang="scss">
-@import '../../assets/styles/common/Typho.scss';
-@import '../../assets/styles/common/container.scss';
-@import '../../assets/styles/common/input.scss';
-@import '../../assets/styles/common/button.scss';
-@import '../../assets/styles/common/image.scss';
-@import '../../assets/styles/colors/_light.scss';
-@import 'bootstrap/scss/bootstrap';
+@import 'Typho';
+@import 'container';
+@import 'input';
+@import 'button';
+@import 'image';
+@import 'light';
+@import 'bootstrap';
 
 .register_container {
   @include container(column, flex-start, flex-start, auto, 100%);
