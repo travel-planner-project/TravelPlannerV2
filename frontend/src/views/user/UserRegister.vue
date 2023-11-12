@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { registerUser } from '../../api/AuthAPI.ts';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { registerUser } from '../../api/AuthAPI';
 
 library.add(faTriangleExclamation);
 
@@ -112,11 +112,11 @@ const handleRegister = async () => {
 </template>
 
 <style scoped lang="scss">
-@import 'Typho';
-@import 'container';
-@import 'input';
-@import 'button';
-@import 'light';
+@import '../../assets/styles/common/Typho';
+@import '../../assets/styles/common/container';
+@import '../../assets/styles/common/input';
+@import '../../assets/styles/common/button';
+@import '../../assets/styles/colors/_light';
 @import 'bootstrap';
 
 .register_container {

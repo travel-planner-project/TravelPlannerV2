@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import { localLogin } from '../../api/AuthAPI.ts';
-import { loginUserInfo } from '../../api/UserAPI.ts';
 import { useQuery } from 'vue-query';
 import { useAuthStore } from '../../store/AuthStore.ts';
+import { loginUserInfo } from '../../api/UserAPI.ts';
 
 const email = ref('');
 const password = ref('');
