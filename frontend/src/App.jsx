@@ -1,3 +1,11 @@
+import Router from "./routes/Router";
+import GlobalStyle from "./utils/GlobalStyle";
+
 export default function App() {
-  return <div>sasdf</div>;
+  return (
+    <>
+      <GlobalStyle />
+      <Router />
+    </>
+  );
 }
